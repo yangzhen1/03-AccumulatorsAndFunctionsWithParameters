@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# TODO:
+# DONE:
 #   1. READ the code below.
 #   2. TRACE (by hand) the execution of the code,
 #        predicting what will get printed.
@@ -14,7 +14,7 @@
 #      ask your instructor or a student assistant about them during class.
 # *****************************************************************************
 #
-# After you have completed the above, mark this _TODO_ as DONE.
+# Af ter you have completed theabove, mark this _TODO_ as DONE.
 #
 ###############################################################################
 
