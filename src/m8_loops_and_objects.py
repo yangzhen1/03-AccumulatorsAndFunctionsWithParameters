@@ -6,18 +6,32 @@ This module demonstrates simple LOOPS of the form:
 and also USING OBJECTS.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Zhen Yang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
 
 def main():
+    #print_sequence1(20)
+    draw_circles1(5)
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
 
-def print_sequence1():
+def print_sequence1(n):
+    total = 0
+    for k in range(n):
+        print(total)
+        total = total + 10
+    print(total)
+    return total
+
+    print()
+    print('--------------------------------------------------')
+    print('Running print_sequence1:')
+    print('--------------------------------------------------')
+
     """
     Prints:
        0
@@ -29,17 +43,34 @@ def print_sequence1():
        200
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its doc-string above.
+    # DONE: 2. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
-    print()
-    print('--------------------------------------------------')
-    print('Running print_sequence1:')
-    print('--------------------------------------------------')
+
+def sub_func(n):
+    total = 0
+    for k in range(n):
+        print(total)
+        total = total + 10
+    print(total)
+    return total
+
+def draw_circles1(n):
+    window = rg.RoseWindow(400, 400)
+    for k in range(n):
+        rg.Circle(rg.Point(200, 200), n)
+        print(sub_func(n))
 
 
-def draw_circles1():
+    turtle = rg.SimpleTurtle()
+    turtle.draw_circle(sub_func(n))
+
+
+
+    window.close_on_mouse_click()
+
+
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws 21 rg.Circle objects such that:
