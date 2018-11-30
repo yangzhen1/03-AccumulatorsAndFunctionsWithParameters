@@ -14,7 +14,9 @@ import rosegraphics as rg
 
 def main():
     #print_sequence1(20)
-    draw_circles1(5)
+    #draw_circles1(5)
+    #print_sequence2(17)
+    print_sequence3(100)
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -58,13 +60,16 @@ def sub_func(n):
 
 def draw_circles1(n):
     window = rg.RoseWindow(400, 400)
+    turtle = rg. SimpleTurtle()
+    total = 0
     for k in range(n):
-        rg.Circle(rg.Point(200, 200), n)
-        print(sub_func(n))
+        total = total + 10
+        turtle.draw_circle(total)
+
+    pp = rg.Circle(rg.Point(2, 5), 3)
 
 
-    turtle = rg.SimpleTurtle()
-    turtle.draw_circle(sub_func(n))
+
 
 
 
@@ -90,7 +95,18 @@ def draw_circles1(n):
     print('--------------------------------------------------')
 
 
-def print_sequence2():
+def print_sequence2(n):
+    total = 50
+    for k in range(n):
+        print(total)
+        total = total + 20
+    print(total)
+    return total
+    print()
+    print('--------------------------------------------------')
+    print('Running print_sequence2:')
+    print('--------------------------------------------------')
+
     """
     Prints:
       50
@@ -106,10 +122,7 @@ def print_sequence2():
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
-    print()
-    print('--------------------------------------------------')
-    print('Running print_sequence2:')
-    print('--------------------------------------------------')
+
 
 
 def draw_circles2():
@@ -133,7 +146,12 @@ def draw_circles2():
     print('--------------------------------------------------')
 
 
-def print_sequence3():
+def print_sequence3(n):
+    total = 0
+    for k in range(n):
+        total = total + 1
+        print(total)
+    return total
     """
     Prints:
       1
