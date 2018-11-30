@@ -164,6 +164,10 @@ def run_test_digits_in_cube():
 
 
 def digits_in_cube(n):
+    cube1 = n ** 3
+    cube2 = sum_of_digits(cube1)
+    return cube2
+
     """
     What comes in:  A positive integer.
     What goes out:  The sum of the digits in the CUBE of the integer.
@@ -215,6 +219,11 @@ def run_test_digits_in_power():
 
 
 def digits_in_power(n, k):
+    power1 = n ** k
+    power2 = sum_of_digits(power1)
+    return power2
+
+
     """
     What comes in:  Two positive integers, n and k.
     What goes out:
@@ -275,6 +284,12 @@ def run_test_fancy_sums_of_digits():
 
 
 def fancy_sums_of_digits(n):
+
+    fancy1 = n ** 1000
+    fancy2 = n ** 999
+    fancy3 = sum_of_digits(fancy1 ** fancy2)
+    return fancy3
+
     """
     What comes in:  A positive integer n.
     What goes out:
@@ -312,4 +327,4 @@ def fancy_sums_of_digits(n):
 # This unusual form is necessary for the special testing we provided.
 # -----------------------------------------------------------------------------
 if __name__ == '__main__':
-    main()
+  main()
