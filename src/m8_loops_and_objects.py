@@ -14,9 +14,10 @@ import rosegraphics as rg
 
 def main():
     #print_sequence1(20)
-    #draw_circles1(5)
+    #draw_circles1(21)
     #print_sequence2(17)
-    print_sequence3(100)
+    draw_circles2(2)
+    #print_sequence3(100)
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -60,19 +61,15 @@ def sub_func(n):
 
 def draw_circles1(n):
     window = rg.RoseWindow(400, 400)
-    turtle = rg. SimpleTurtle()
     total = 0
     for k in range(n):
+        center_point = rg.Point(200, 200)
+        radius = total
+        print(total)
         total = total + 10
-        turtle.draw_circle(total)
-
-    pp = rg.Circle(rg.Point(2, 5), 3)
-
-
-
-
-
-
+        circle = rg.Circle(center_point, radius)
+        circle.attach_to(window)
+    window.render()
     window.close_on_mouse_click()
 
 
@@ -100,8 +97,11 @@ def print_sequence2(n):
     for k in range(n):
         print(total)
         total = total + 20
+
     print(total)
     return total
+
+
     print()
     print('--------------------------------------------------')
     print('Running print_sequence2:')
@@ -124,8 +124,17 @@ def print_sequence2(n):
     # -------------------------------------------------------------------------
 
 
+def draw_circles2(n):
+    window = rg.RoseWindow(400, 400)
+    for k in range(n):
+        radius = 10
+        apple = print_sequence2(n)
+        center_point = rg.Point(apple,100)
+        circle = rg.Circle(center_point, radius)
+        circle.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
 
-def draw_circles2():
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws rg.Circle objects such that:
