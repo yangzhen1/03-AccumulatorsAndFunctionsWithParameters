@@ -12,11 +12,11 @@ import rosegraphics as rg
 
 
 def main():
-    lines()
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
     #two_circles()
     #circle_and_rectangle()
+    #lines()
 
 def two_circles():
     window = rg.RoseWindow(500, 500)
@@ -55,7 +55,6 @@ def circle_and_rectangle():
     fill_color = "blue"
     centers_x_coordinate = 200
     centers_y_coordinate = 200
-    center = "Point(200, 200)"
 
     center_point = rg.Point(centers_x_coordinate, centers_y_coordinate)
     circle = rg.Circle(center_point, 50)
@@ -64,15 +63,12 @@ def circle_and_rectangle():
 
     outline_rectangle = 3
     fill_color2 = None
-    cornora = ((330 + 440) / 2)
-    cornorb = ((440 + 330) / 2)
-
 
     rectangle = rg.Rectangle(rg.Point(330, 330), rg.Point(440, 440))
     center_rect = rectangle.get_center()
 
-
-
+    mouth = rectangle.get_center().x
+    ear = rectangle.get_center().y
 
     circle.attach_to(window)
     rectangle.attach_to(window)
@@ -81,15 +77,15 @@ def circle_and_rectangle():
 
     print(outline_thickness)
     print(fill_color)
-    print(center)
+    print(center_point)
     print(centers_x_coordinate)
     print(centers_y_coordinate)
 
     print(outline_rectangle)
     print(fill_color2)
     print(center_rect)
-    print(cornora)
-    print(cornorb)
+    print(mouth)
+    print(ear)
 
     """
     -- Constructs an rg.RoseWindow.
@@ -137,14 +133,17 @@ def lines():
     line1 = rg.Line(rg.Point(220, 220), rg.Point(440, 440))
     line2 = rg.Line(rg.Point(174, 466), rg.Point(466, 332))
     line1.thickness = 4
-    goubi = line1.get_midpoint()
+    apple = line1.get_midpoint()
+    banana = line1.get_midpoint().x
+    pear = line1.get_midpoint().y
     line1.attach_to(window)
     line2.attach_to(window)
     window.render()
     window.close_on_mouse_click()
 
-    print(goubi)
-    print()
+    print(apple)
+    print(banana)
+    print(pear)
 
 
     """
@@ -168,7 +167,7 @@ def lines():
 
     -- Waits for the user to press the mouse, then closes the window.
     """
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
 
 
 # -----------------------------------------------------------------------------
